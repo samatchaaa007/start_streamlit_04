@@ -1,45 +1,72 @@
 import streamlit as st
 import pandas as pd
+import time
+
+#st.set_page_config(layout="wide")
 
 def show():
-    st.write("### ยินดีต้อนรับสู่หน้า 1")
-    st.write("เนื้อหาของหน้า 1")
+    # ----------------------
+    # Header
+    # ----------------------
+    st.title("🚀 ยินดีต้อนรับสู่ Dashboard ของเรา")
+    st.markdown("""
+    ### เกี่ยวกับระบบ
+    ระบบนี้ถูกออกแบบมาเพื่อแสดงข้อมูล Redeem, ประมวลผลข้อมูล, และแสดงผลในรูปแบบ Interactive Dashboard อย่างมืออาชีพ ✨
 
-    # Page Title
-    st.title("Getting Started with Streamlit")
-    st.write("This is an introduction to Streamlit")
+    คุณสามารถดูภาพรวมข้อมูล, วิเคราะห์เชิงลึก, หรือกรองข้อมูลผ่าน Sidebar ได้ทันที
+    """)
 
-    # Displaying Source Code
-    st.markdown("## Source Code")
-    with st.echo():
-        st.markdown("### Code Example")
-        
-        code = '''
+    # ----------------------
+    # Animation Spinner
+    # ----------------------
+    with st.spinner("กำลังโหลดข้อมูลเบื้องต้น..."):
+        time.sleep(1.5)
+    st.success("โหลดข้อมูลสำเร็จแล้ว! ✅")
+
+    # ----------------------
+    # Code Example with st.echo
+    # ----------------------
+    st.markdown("""
+    ## 🔧 ตัวอย่างการเขียนโค้ด Python
+    ลองกดปุ่มเพื่อดูตัวอย่างโค้ด
+    """)
+
+    code = '''
 def hello():
-    print("Hello, Streamlit!")
-'''
-        show_btn = st.button("Show code!")
-        if show_btn:
-            st.code(code, language='python')
+    print("Hello, Streamlit!")'''
 
-    # Creating Two Columns
-    cols = st.columns(2)
+    with st.expander("📜 แสดงตัวอย่างโค้ด"):
+        st.code(code, language='python')
 
-    with cols[0]:
-        age_inp = st.number_input("Input your age")
-        st.markdown(f"Your age is {round(age_inp, 2)}")
+    # ----------------------
+    # Columns for user input
+    # ----------------------
+    st.markdown("---")
+    st.markdown("## 🧪 ทดลองป้อนข้อมูล")
+    col1, col2 = st.columns(2)
 
-    with cols[1]:
-        text_inp = st.text_input("Input your text")
-        word_tokenize = "|".join(text_inp.split())
-        st.markdown(f"Tokenized text: {word_tokenize}")
+    with col1:
+        age = st.number_input("กรอกอายุของคุณ", min_value=0, max_value=120)
+        st.info(f"คุณอายุ {age} ปี")
 
-    # ✅ Example DataFrame for chart
+    with col2:
+        text = st.text_input("พิมพ์ข้อความอะไรก็ได้")
+        if text:
+            tokens = text.split()
+            st.success(f"Tokenized: {' | '.join(tokens)}")
+
+    # ----------------------
+    # Sample Chart
+    # ----------------------
+    st.markdown("---")
+    st.markdown("## 📈 แสดงตัวอย่างกราฟแบบเส้น")
+
     df = pd.DataFrame({
-        'first column': list(range(10)),
-        'second column': [x**2 for x in range(10)]
+        'x': list(range(10)),
+        'y': [x**2 for x in range(10)]
     })
 
-    # Button to Show Chart
-    if st.button("Show Chart!!"):
-        st.line_chart(df, x='first column', y='second column')
+    st.line_chart(df, x='x', y='y')
+
+# เรียกใช้
+show()
