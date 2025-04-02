@@ -6,6 +6,21 @@ from user_data import users, user_permissions
 from datetime import datetime
 from log_utils import log_event
 from streamlit_javascript import st_javascript
+import csv
+
+# 1. เก็บข้อมูลจาก Browser
+user_agent = st_javascript("navigator.userAgent")
+ip = st_javascript("await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip)")
+
+# 2. แสดงผล (สำหรับดูระหว่าง dev)
+st.write("🌍 IP:", ip)
+st.write("🧭 Browser:", user_agent)
+
+# 3. เขียนลงไฟล์ CSV
+if ip and user_agent:
+    with open('user_login_log.csv', mode='a', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow([datetime.now(), ip, user_agent])
 
 # -----------------------------
 # Mapping หน้า
@@ -140,7 +155,11 @@ def login():
                     st.session_state.profile_pic = user.get("profile_pic", f"https://i.pravatar.cc/150?u={username}")
 
                     log_event(username, user["fullname"], browser=user_agent, page="Login", event="login", ip=ip)
-
+                    # หลังจาก log_event(...) ใน login() ให้เพิ่ม:
+                    if ip and user_agent:
+                        with open('user_login_log.csv', mode='a', newline='', encoding='utf-8') as file:
+                            writer = csv.writer(file)
+                            writer.writerow([datetime.now(), username, user['fullname'], ip, user_agent])
                     st.success(f"🎉 ยินดีต้อนรับคุณ {user['fullname']}")
                     st.rerun()
                 else:
