@@ -8,15 +8,15 @@ from log_utils import log_event
 from streamlit_javascript import st_javascript
 import csv
 
-# 1. เก็บข้อมูลจาก Browser
-user_agent = st_javascript("navigator.userAgent")
-ip = st_javascript("await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip)")
 
-# 2. แสดงผล (สำหรับดูระหว่าง dev)
+user_agent = st_javascript(code="navigator.userAgent")
+ip = st_javascript(code="await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip)")
+
+
 st.write("🌍 IP:", ip)
 st.write("🧭 Browser:", user_agent)
 
-# 3. เขียนลงไฟล์ CSV
+
 if ip and user_agent:
     with open('user_login_log.csv', mode='a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
