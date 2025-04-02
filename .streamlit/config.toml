@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#2ecc71"            # เขียวสด (สำหรับปุ่ม multiselect และไฮไลต์)
+backgroundColor = "#FFFFFF"         # พื้นหลังขาว
+secondaryBackgroundColor = "#ecf9f1" # เขียวอ่อนสำหรับ sidebar
+textColor = "#000000"               # ตัวอักษรสีดำ
+font = "sans serif"

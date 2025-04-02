@@ -1,0 +1,53 @@
+timestamp,username,fullname,browser,page,event,ip
+2025-03-28T11:37:34.667636,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Login,login,119.31.121.152
+2025-03-28T11:37:34.832917,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 1,visit_page,119.31.121.152
+2025-03-28T11:37:37.609381,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 6,visit_page,119.31.121.152
+2025-03-28T11:39:01.506608,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Login,login,119.31.121.152
+2025-03-28T11:39:01.682987,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 1,visit_page,119.31.121.152
+2025-03-28T11:39:03.825744,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 6,visit_page,119.31.121.152
+2025-03-31T10:41:39.026130,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 6,visit_page,119.31.121.152
+2025-03-31T13:03:02.936181,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Login,login,124.122.8.232
+2025-03-31T13:03:03.516525,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 1,visit_page,124.122.8.232
+2025-03-31T13:03:09.701532,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 6,visit_page,124.122.8.232
+2025-03-31T13:03:36.706750,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 5,visit_page,124.122.8.232
+2025-03-31T13:03:50.711218,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 2,visit_page,124.122.8.232
+2025-03-31T13:03:54.999957,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 5,visit_page,124.122.8.232
+2025-03-31T13:04:08.558851,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 2,visit_page,124.122.8.232
+2025-03-31T16:20:29.804627,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 2,visit_page,124.122.8.232
+2025-04-01T09:09:42.378171,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Login,login,124.122.8.232
+2025-04-01T09:09:42.681550,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 1,visit_page,124.122.8.232
+2025-04-01T09:09:49.798996,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 5,visit_page,124.122.8.232
+2025-04-01T09:10:18.079512,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 6,visit_page,124.122.8.232
+2025-04-01T09:17:44.731390,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 2,visit_page,124.122.8.232
+2025-04-01T09:17:56.959106,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 5,visit_page,124.122.8.232
+2025-04-01T10:21:59.892753,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Login,login,124.122.8.232
+2025-04-01T10:22:00.094453,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 1,visit_page,124.122.8.232
+2025-04-01T10:22:05.261093,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 2,visit_page,124.122.8.232
+2025-04-01T10:25:26.640732,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Login,login,124.122.8.232
+2025-04-01T10:25:26.847153,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 1,visit_page,124.122.8.232
+2025-04-01T10:25:30.167151,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",Page 3,visit_page,124.122.8.232
+2025-04-01T12:11:25.827501,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",Login,login,49.230.146.25
+2025-04-01T12:12:37.157910,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",Login,login,49.230.146.25
+2025-04-01T12:12:37.375686,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",Page 1,visit_page,49.230.146.25
+2025-04-01T12:12:45.933987,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",Page 5,visit_page,49.230.146.25
+2025-04-01T12:27:23.886390,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",Login,login,49.230.146.25
+2025-04-01T12:27:23.989566,admin,สมชาย แอดมิน,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",Page 1,visit_page,49.230.146.25
+2025-04-01T15:18:42.447319,admin,สมชาย แอดมิน,Unknown,Login,login,Unknown
+2025-04-01T15:21:21.251318,admin,สมชาย แอดมิน,Unknown,Login,login,Unknown
+2025-04-01T15:23:51.920415,admin,สมชาย แอดมิน,Unknown,Login,login,Unknown
+2025-04-01T15:23:51.990943,admin,สมชาย แอดมิน,Unknown,Page 1,visit_page,Unknown
+2025-04-01T15:23:59.316803,admin,สมชาย แอดมิน,Unknown,Page 2,visit_page,Unknown
+2025-04-01T15:39:06.452360,admin,สมชาย แอดมิน,Unknown,Login,login,Unknown
+2025-04-01T15:39:06.550459,admin,สมชาย แอดมิน,Unknown,Page 1,visit_page,Unknown
+2025-04-01T15:40:27.381303,admin,สมชาย แอดมิน,Unknown,Login,login,Unknown
+2025-04-01T15:40:27.472967,admin,สมชาย แอดมิน,Unknown,Page 1,visit_page,Unknown
+2025-04-01T15:40:56.523606,admin,สมชาย แอดมิน,Unknown,Login,login,Unknown
+2025-04-01T15:40:56.608888,admin,สมชาย แอดมิน,Unknown,Page 1,visit_page,Unknown
+2025-04-01T15:45:56.613207,admin,สมชาย แอดมิน,Unknown,Login,login,Unknown
+2025-04-01T15:45:56.693036,admin,สมชาย แอดมิน,Unknown,Page 1,visit_page,Unknown
+2025-04-01T15:50:12.230148,admin,สมชาย แอดมิน,Unknown,Login,login,Unknown
+2025-04-01T15:50:12.315221,admin,สมชาย แอดมิน,Unknown,Page 1,visit_page,Unknown
+2025-04-01T15:54:29.028486,admin,สมชาย แอดมิน,Unknown,Login,login,Unknown
+2025-04-01T15:54:29.102283,admin,สมชาย แอดมิน,Unknown,Page 1,visit_page,Unknown
+2025-04-01T15:57:33.517100,admin,สมชาย แอดมิน,Unknown,Login,login,Unknown
+2025-04-01T15:57:33.601117,admin,สมชาย แอดมิน,Unknown,Page 1,visit_page,Unknown
