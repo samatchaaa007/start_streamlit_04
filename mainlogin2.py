@@ -8,20 +8,6 @@ from log_utils import log_event
 from streamlit_javascript import st_javascript
 import csv
 
-
-user_agent = st_javascript(code="navigator.userAgent")
-ip = st_javascript(code="await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip)")
-
-
-st.write("🌍 IP:", ip)
-st.write("🧭 Browser:", user_agent)
-
-
-if ip and user_agent:
-    with open('user_login_log.csv', mode='a', newline='', encoding='utf-8') as file:
-        writer = csv.writer(file)
-        writer.writerow([datetime.now(), ip, user_agent])
-
 # -----------------------------
 # Mapping หน้า
 # -----------------------------
@@ -83,33 +69,27 @@ def set_ais_theme():
         outline: none !important;
     }
 
-    /* ✅ ลดช่องว่างด้านบนของเนื้อหา */
     .block-container {
         padding-top: 0.5rem !important;
     }
     </style>
     """, unsafe_allow_html=True)
 
-st.markdown("""
-    <style>
-        header[data-testid="stHeader"] {
-            background-color: #00573D; /* เขียวเข้ม */
-            color: white;
-        }
-
-        /* ปรับ text/tab title ให้มองเห็นได้ */
-        header[data-testid="stHeader"] .st-emotion-cache-18ni7ap {
-            color: white !important;
-            font-weight: bold;
-        }
-
-        /* ลดช่องว่าง header ถ้ามีมากเกิน */
-        .block-container {
-            padding-top: 1rem !important;
-        }
+    st.markdown("""
+        <style>
+            header[data-testid="stHeader"] {
+                background-color: #00573D;
+                color: white;
+            }
+            header[data-testid="stHeader"] .st-emotion-cache-18ni7ap {
+                color: white !important;
+                font-weight: bold;
+            }
+            .block-container {
+                padding-top: 1rem !important;
+            }
         </style>
     """, unsafe_allow_html=True)
-
 
 # -----------------------------
 # ฟังก์ชัน Login
@@ -133,8 +113,9 @@ def login():
         </div>
     """, unsafe_allow_html=True)
 
-    user_agent = st_javascript(code="navigator.userAgent") or "Unknown"
-    ip = st_javascript(code="await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip)") or "Unknown"
+    # ✅ ใช้ key ให้ไม่ซ้ำกัน
+    user_agent = st_javascript(code="navigator.userAgent", key="ua_login") or "Unknown"
+    ip = st_javascript(code="await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip)", key="ip_login") or "Unknown"
 
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
@@ -155,11 +136,13 @@ def login():
                     st.session_state.profile_pic = user.get("profile_pic", f"https://i.pravatar.cc/150?u={username}")
 
                     log_event(username, user["fullname"], browser=user_agent, page="Login", event="login", ip=ip)
-                    # หลังจาก log_event(...) ใน login() ให้เพิ่ม:
+
+                    # ✅ เขียน log ลง CSV
                     if ip and user_agent:
                         with open('user_login_log.csv', mode='a', newline='', encoding='utf-8') as file:
                             writer = csv.writer(file)
                             writer.writerow([datetime.now(), username, user['fullname'], ip, user_agent])
+
                     st.success(f"🎉 ยินดีต้อนรับคุณ {user['fullname']}")
                     st.rerun()
                 else:
@@ -191,8 +174,10 @@ def main_app():
             st.session_state.pop(key, None)
         st.rerun()
 
-    user_agent = st_javascript(code="navigator.userAgent") or "Unknown"
-    ip = st_javascript(code="await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip)") or "Unknown"
+    # ✅ ใช้ key ไม่ซ้ำกับ login
+    user_agent = st_javascript(code="navigator.userAgent", key="ua_main") or "Unknown"
+    ip = st_javascript(code="await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip)", key="ip_main") or "Unknown"
+
     log_event(username, fullname, browser=user_agent, page=page, event="visit_page", ip=ip)
 
     st.markdown(f"<h2 class='text-success'>📄 {page}</h2>", unsafe_allow_html=True)
