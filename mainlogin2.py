@@ -59,7 +59,7 @@ def set_ais_theme():
         background-color: #66a81a;
         transform: scale(1.02);
     }
-    input:focus,
+    /*input:focus,
     input[type="password"]:focus,
     textarea:focus,
     .stTextInput input:focus,
@@ -67,7 +67,7 @@ def set_ais_theme():
         border: 1px solid #78BE20 !important;
         box-shadow: 0 0 0 0.2rem rgba(120, 190, 32, 0.25) !important;
         outline: none !important;
-    }
+    }*/
 
     .block-container {
         padding-top: 0.5rem !important;
