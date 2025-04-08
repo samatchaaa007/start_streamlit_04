@@ -12,7 +12,7 @@ import csv
 # Mapping หน้า
 # -----------------------------
 page_mapping = {
-    "HOME": page1,
+    "Page 1": HOME,
     "Page 2": page2,
     "Page 3": page3,
     "Page 4": page4,
