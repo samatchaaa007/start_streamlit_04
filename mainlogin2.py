@@ -89,13 +89,13 @@ def login():
 
     st.markdown("""
         <div style='
-            text-align: center;
-            font-size: 40px;
-            font-weight: bold;
+            text-align: center; 
+            font-size: 40px; 
+            font-weight: bold; 
             padding-top: 1rem;
             margin-bottom: -6rem;
             line-height: 4;
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); 
             -webkit-background-clip: text;
             color: transparent;
         '>
