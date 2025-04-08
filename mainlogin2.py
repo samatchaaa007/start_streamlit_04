@@ -150,7 +150,7 @@ def main_app():
         "Page 3": "Page 3",
         "Page 4": "Page 4",
         "Page 5": "Page 5",
-        "Page 6": "Page 6"
+        "LOG Page": "Page 6"
     }
 
     display_options = [display for display, real in display_name_map.items() if real in allowed_pages]
