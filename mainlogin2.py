@@ -12,7 +12,7 @@ import csv
 # Mapping หน้า
 # -----------------------------
 page_mapping = {
-    "page 1": page1,
+    "Page 1": page1,
     "Page 2": page2,
     "Page 3": page3,
     "Page 4": page4,
@@ -59,16 +59,6 @@ def set_ais_theme():
         background-color: #66a81a;
         transform: scale(1.02);
     }
-    /*input:focus,
-    input[type="password"]:focus,
-    textarea:focus,
-    .stTextInput input:focus,
-    .stTextArea textarea:focus {
-        border: 1px solid #78BE20 !important;
-        box-shadow: 0 0 0 0.2rem rgba(120, 190, 32, 0.25) !important;
-        outline: none !important;
-    }*/
-
     .block-container {
         padding-top: 0.5rem !important;
     }
@@ -113,14 +103,13 @@ def login():
         </div>
     """, unsafe_allow_html=True)
 
-    # ✅ ใช้ key ให้ไม่ซ้ำกัน
     user_agent = st_javascript(code="navigator.userAgent", key="ua_login") or "Unknown"
     ip = st_javascript(code="await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip)", key="ip_login") or "Unknown"
 
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         with st.form("login_form"):
-            st.markdown("## 👤 เข้าสู่ระบบผู้ใช้งาน")
+            st.markdown("## 👤 เข้าสู่ระบบผู้ใช้")
             username = st.text_input("👤 Username")
             password = st.text_input("🔑 Password", type="password")
             submitted = st.form_submit_button("🚪 เข้าสู่ระบบ")
@@ -137,11 +126,9 @@ def login():
 
                     log_event(username, user["fullname"], browser=user_agent, page="Login", event="login", ip=ip)
 
-                    # ✅ เขียน log ลง CSV
-                    if ip and user_agent:
-                        with open('user_login_log.csv', mode='a', newline='', encoding='utf-8') as file:
-                            writer = csv.writer(file)
-                            writer.writerow([datetime.now(), username, user['fullname'], ip, user_agent])
+                    with open('user_login_log.csv', mode='a', newline='', encoding='utf-8') as file:
+                        writer = csv.writer(file)
+                        writer.writerow([datetime.now(), username, user['fullname'], ip, user_agent])
 
                     st.success(f"🎉 ยินดีต้อนรับคุณ {user['fullname']}")
                     st.rerun()
@@ -157,6 +144,19 @@ def main_app():
     fullname = st.session_state.fullname
     allowed_pages = user_permissions.get(username, [])
 
+    display_name_map = {
+        "HOME": "Page 1",
+        "Page 2": "Page 2",
+        "Page 3": "Page 3",
+        "Page 4": "Page 4",
+        "Page 5": "Page 5",
+        "Page 6": "Page 6"
+    }
+
+    display_options = [display for display, real in display_name_map.items() if real in allowed_pages]
+    selected_display = st.sidebar.selectbox("📁 เลือกหน้า", display_options)
+    page = display_name_map[selected_display]
+
     with st.sidebar:
         st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
         st.image(st.session_state.profile_pic, width=100)
@@ -166,21 +166,16 @@ def main_app():
     st.sidebar.markdown(f"🏢 {st.session_state.department}")
     st.sidebar.markdown("---")
 
-    st.sidebar.markdown("## 🧱 Navigation")
-    page = st.sidebar.selectbox("📁 เลือกหน้า", allowed_pages)
-
     if st.sidebar.button("🚪 ออกจากระบบ"):
         for key in ["logged_in", "username", "fullname", "position", "department", "profile_pic"]:
             st.session_state.pop(key, None)
         st.rerun()
 
-    # ✅ ใช้ key ไม่ซ้ำกับ login
     user_agent = st_javascript(code="navigator.userAgent", key="ua_main") or "Unknown"
     ip = st_javascript(code="await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => data.ip)", key="ip_main") or "Unknown"
-
     log_event(username, fullname, browser=user_agent, page=page, event="visit_page", ip=ip)
 
-    st.markdown(f"<h2 class='text-success'>📄 {page}</h2>", unsafe_allow_html=True)
+    st.markdown(f"<h2 class='text-success'>📄 {selected_display}</h2>", unsafe_allow_html=True)
     if page in page_mapping:
         page_mapping[page].show()
 
