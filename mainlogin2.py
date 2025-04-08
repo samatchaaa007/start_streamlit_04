@@ -21,7 +21,7 @@ page_mapping = {
 }
 
 # -----------------------------
-# ธีม AIS + Bootstrap + Filter Style
+# ธีม AIS + Bootstrap
 # -----------------------------
 def set_ais_theme():
     st.markdown("""
@@ -61,25 +61,6 @@ def set_ais_theme():
     }
     .block-container {
         padding-top: 0.5rem !important;
-    }
-
-    /* Custom filter sidebar style */
-    [data-testid="stSidebar"] {
-        background-color: #ECF9F0;
-        padding: 1rem;
-    }
-    div[data-baseweb="tag"] {
-        background-color: #78BE20 !important;
-        color: white !important;
-        font-weight: bold;
-        border-radius: 8px !important;
-    }
-    [data-testid="stSidebar"] label {
-        font-weight: 600;
-        color: #00573D;
-    }
-    .css-1r6slb0 .stSlider > div[data-testid="stTickBar"] {
-        background: #78BE20 !important;
     }
     </style>
     """, unsafe_allow_html=True)
