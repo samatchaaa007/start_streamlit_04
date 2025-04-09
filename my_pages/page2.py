@@ -8,6 +8,17 @@ from plotly.subplots import make_subplots
 # st.set_page_config(layout="wide")
 
 def show():
+
+    st.markdown("""
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Prompt&display=swap" rel="stylesheet">
+        <style>
+        body, .stApp {
+            font-family: "Inter", "Prompt", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #111111;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+    
     st.title("📊 Dashboard รวมข้อมูล Redeem")
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
