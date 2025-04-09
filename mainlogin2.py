@@ -32,7 +32,7 @@ def set_ais_theme():
     body, .stApp {
         background-color: #ffffff;
         color: #333333;
-        font-family: "Prompt", sans-serif;
+        font-family: "Noto Sans Thai", sans-serif;
     }
     h1, h2 {
         color: #78BE20;
