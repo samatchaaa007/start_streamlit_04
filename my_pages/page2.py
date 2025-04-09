@@ -65,7 +65,7 @@ def show():
                 box-shadow: 4px 4px 10px {shadow_color};
             ">
                 <h1 style="color: {text_color}; font-size: 36px; margin-bottom: 5px;">{value:,}</h1>
-                <h3 style="color: #333; font-size: 20px;">{title}</h3>
+                <h3 style="color: #ffffff; font-size: 20px;">{title}</h3>
             </div>
             """,
             unsafe_allow_html=True
