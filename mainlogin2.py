@@ -25,6 +25,10 @@ page_mapping = {
 # -----------------------------
 def set_ais_theme():
     st.markdown("""
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Prompt&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -32,12 +36,17 @@ def set_ais_theme():
     body, .stApp {
         background-color: #ffffff;
         color: #333333;
-        font-family: "Noto Sans Thai", sans-serif;
+        font-family: 'Inter', 'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        font-size: 16px;
     }
-    h1, h2 {
+
+    h1, h2, h3, h4, h5, h6 {
         color: #78BE20;
-        line-height: 4;
+        font-weight: 600;
+        line-height: 1.4;
+        letter-spacing: 0.5px;
     }
+
     .btn-success {
         background-color: #78BE20 !important;
         border-color: #78BE20 !important;
@@ -46,6 +55,7 @@ def set_ais_theme():
         background-color: #66a81a !important;
         border-color: #66a81a !important;
     }
+
     .stButton>button {
         background-color: #78BE20;
         color: white !important;
@@ -55,12 +65,24 @@ def set_ais_theme():
         padding: 0.5em 1.2em;
         transition: background-color 0.3s ease;
     }
+
     .stButton>button:hover {
         background-color: #66a81a;
         transform: scale(1.02);
     }
+
     .block-container {
         padding-top: 0.5rem !important;
+    }
+
+    header[data-testid="stHeader"] {
+        background-color: #00573D;
+        color: white;
+    }
+
+    header[data-testid="stHeader"] .st-emotion-cache-18ni7ap {
+        color: white !important;
+        font-weight: bold;
     }
     </style>
     """, unsafe_allow_html=True)
