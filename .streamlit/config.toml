@@ -3,4 +3,4 @@ primaryColor = "#2ecc71"            # เขียวสด (สำหรับ�
 backgroundColor = "#FFFFFF"         # พื้นหลังขาว
 secondaryBackgroundColor = "#ecf9f1" # เขียวอ่อนสำหรับ sidebar
 textColor = "#000000"               # ตัวอักษรสีดำ
-font = "sans serif"
+font = "Mitr"
