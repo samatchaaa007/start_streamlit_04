@@ -7,7 +7,19 @@ import numpy as np
 
 #st.set_page_config(layout="wide")
 
+def title():
+    st.markdown("""
+        <style>
+            h1 {
+                font-size: 36px;
+                color: #78BE20;
+                font-weight: bold;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+
 def show():
+    title()
     st.title("📈 Dashboard หน้า 3: วิเคราะห์ยอดขายเชิงลึก")
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
