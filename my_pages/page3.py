@@ -20,7 +20,7 @@ def title():
 
 def show():
     title()
-    st.h1("📈 Dashboard หน้า 3: วิเคราะห์ยอดขายเชิงลึก")
+    st.title("📈 Dashboard หน้า 3: วิเคราะห์ยอดขายเชิงลึก")
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "📊 Summary Table", "📉 Line Chart", "📌 KPI Dashboard", "📎 Heatmap", "🧪 Interactive"
