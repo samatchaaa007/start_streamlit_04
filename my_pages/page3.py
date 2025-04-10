@@ -11,7 +11,7 @@ def title():
     st.markdown("""
         <style>
             h1 {
-                font-size: 36px;
+                font-size: 20px;
                 color: #78BE20;
                 font-weight: bold;
             }
